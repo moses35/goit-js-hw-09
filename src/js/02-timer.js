@@ -31,7 +31,7 @@ flatpickr('#datetime-picker', {
     if (selectedDates[0].getTime() <= Date.now()) {
       Notiflix.Notify.failure('Please choose a date in the future');
     } else {
-      startTime = selectedDates[0];
+      startTime = selectedDates[0].getTime();
       btnStart.disabled = false;
     }
   },
